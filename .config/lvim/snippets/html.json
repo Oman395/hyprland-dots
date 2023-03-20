@@ -1,0 +1,25 @@
+{
+  "canvas": {
+    "prefix": "canvas",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html>",
+      "<head>",
+      " <script src=index.js></script>",
+      " <style>",
+      "canvas {",
+      " position: absolute;",
+      " left: 0;",
+      " top: 0;",
+      " width: 100vw",
+      " height: 100vh",
+      "}",
+      " </style>",
+      "</head>",
+      "<body>",
+      " <canvas id=canvas>",
+      "</body>",
+      "</html>"
+    ]
+  }
+}

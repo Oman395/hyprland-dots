@@ -1,0 +1,6 @@
+[2023-02-21 21:18:40.714] [info] Using configuration file /home/oran/.config/waybar/config/icons/horizontal/config.jsonc
+[2023-02-21 21:18:40.714] [info] Using CSS file /home/oran/.config/waybar/styles/bubbles/catppuccin_macchiato/horizontal/style.css
+[2023-02-21 21:18:40.723] [warning] module sway/workspaces: Disabling module "sway/workspaces", Socket path is empty
+[2023-02-21 21:18:40.725] [warning] module sway/mode: Disabling module "sway/mode", Socket path is empty
+[2023-02-21 21:18:40.726] [info] Hyprland IPC starting
+[2023-02-21 21:18:40.750] [info] Bar configured (width: 1508, height: 38) for output: eDP-1

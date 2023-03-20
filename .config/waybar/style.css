@@ -1,0 +1,164 @@
+@import "macchiato.css";
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: @crust;
+    color: @text;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: @base;
+    color: @overlay0;
+}
+
+#workspaces button label {
+  font-size: 16px;
+}
+
+#workspaces button:hover {
+  color:@rosewater;
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
+#workspaces button.active {
+  color: @text;
+}
+
+#custom-arGap {
+  font-size: 29px;
+  color: @base;
+  background-color: @red;
+}
+
+#custom-archthing {
+  font-size: 29px;
+  color: @base;
+  background-color: @red;
+}
+
+#custom-wsGap {
+  font-size: 29px;
+  color: @red;
+}
+
+#custom-mgl {
+  font-size: 29px;
+  color: @maroon;
+}
+
+#custom-playerctl {
+  background-color: @maroon;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: @base;
+  font-size: 29px;
+}
+
+#custom-mgr {
+  font-size: 29px;
+  color: @maroon;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+#workspaces:first-child button {
+  padding-left: 10px;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+
+
+#clock,
+#battery,
+#backlight,
+#network,
+#pulseaudio
+{
+    padding: 0 10px;
+    color: @text;
+    font-size: 29px;
+}
+
+#custom-paGap {
+  color: @lavender;
+  background-color: rgba(0,0,0,0);
+  font-size: 29px;
+}
+
+#pulseaudio {
+    background-color: @lavender;
+    color: @base;
+}
+
+#custom-blGap {
+  font-size: 29px;
+  background-color: @blue;
+  color: @lavender;
+}
+
+#backlight {
+    background-color: @blue;
+    color: @base;
+}
+
+#custom-baGap {
+  font-size: 29px;
+  color: @blue;
+  background-color: @sapphire;
+}
+
+#battery {
+    background-color: @sapphire;
+    color: @base;
+}
+
+#custom-netGap {
+  font-size: 29px;
+  color: @sapphire;
+  background-color: @sky;
+}
+
+#network {
+    background-color: @sky;
+    color: @base;
+}
+
+#custom-clGap {
+  font-size: 29px;
+  color: @sky;
+  background-color: @green;
+}
+
+#clock {
+  background-color: @green;
+  color: @base;
+  font-size:15;
+}

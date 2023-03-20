@@ -1,0 +1,156 @@
+{
+  "layer": "top",
+  "height": 30,
+  "spacing": 0,
+  "modules-left": [
+    "wlr/workspaces",
+    "custom/arGap",
+    "custom/archthing",
+    "custom/wsGap"
+  ],
+  "modules-center": [
+    "custom/mgl",
+    "custom/playerctl",
+    "custom/mgr"
+  ],
+  "modules-right": [
+    "custom/paGap",
+    "pulseaudio",
+    "custom/blGap",
+    "backlight",
+    "custom/baGap",
+    "battery",
+    "custom/netGap",
+    "network",
+    "custom/clGap",
+    "clock"
+  ],
+  "wlr/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "active": "",
+      "default": ""
+    }
+  },
+  "custom/playerctl": {
+    "format": "{icon}<span font='13'>  {}</span>",
+    "return-type": "json",
+    "max-length": 40,
+    "exec": "~/.config/waybar/audio.sh",
+    "on-click": "playerctl play-pause",
+    "interval": 1,
+    "format-icons": {
+      "Playing": "<span font='13'></span>",
+      "Paused": "<span font='13'></span>"
+    }
+  },
+  "custom/arGap": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/archthing": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "rofi -show drun -normal-window -steal-focus -modes drun,run,filebrowser,window"
+  },
+  "custom/wsGap": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/mgl": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/mgr": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/paGap": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/blGap": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/baGap": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/netGap": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/clGap": {
+    "format": "",
+    "tooltip": false
+  },
+  "clock": {
+    "format": "<span font='13'>{:%H:%M}</span>",
+    "tooltip-format": "{:%H:%M  |  %Z}",
+    "on-click": "galendae"
+  },
+  "backlight": {
+    "format": "󰃠{icon}",
+    "tooltip": true,
+    "format-icons": [
+      "󰣾",
+      "󰣴",
+      "󰣶",
+      "󰣸",
+      "󰣺"
+    ]
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}",
+    "tooltip-format": "{capacity}%  |  {time}",
+    "format-charging": "{icon}",
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
+    "on-click": "~/.config/rofi/rofigen/rofigen ~/.config/rofi/pregen.sh"
+  },
+  "network": {
+    "format": "󰖩{icon}",
+    "tooltip-format": "{essid}  |  {ipaddr}  |  {ifname}",
+    "format-icons": [
+      "󰣾",
+      "󰣴",
+      "󰣶",
+      "󰣸",
+      "󰣺"
+    ],
+    "on-click": "~/.config/rofi/rofi-iwd-menu/rofi-wifi-menu.sh",
+    "format-disconnected": "󰖩󰣽"
+  },
+  "pulseaudio": {
+    "format": "󰕾{icon}",
+    "tooltip-format": "{volume}%",
+    "format-muted": "󰖁{icon}",
+    "format-icons": {
+      "default": [
+        "󰣾",
+        "󰣴",
+        "󰣶",
+        "󰣸",
+        "󰣺"
+      ]
+    },
+    "enable-bar-scroll": true,
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  }
+}

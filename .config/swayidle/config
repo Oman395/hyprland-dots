@@ -1,0 +1,3 @@
+timeout 60 'kitty -o allow_remote_control=yes --listen-on unix:/tmp/pipekitty -T fspipe --detach pipes.sh -t 1 -r 20000 -p 1 -s 30 -f 50'
+timeout 600 'swaylock -p && kitty @ --to unix:/tmp/pipekitty close-tab'
+timeout 1200 'systemctl suspend'

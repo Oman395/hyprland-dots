@@ -1,0 +1,21 @@
+{
+  "server": {
+    "prefix": "server",
+    "body": [
+      "import http from 'http';",
+      "import fs from 'fs';",
+      "import mime from 'mime-types';",
+      "http.createServer((req, res) => {",
+      " req.url = req.url == '/' ? './index.html' : '.' + req.url",
+      " fs.readFile(req.url, (err, data) => {",
+      "   if(err) {",
+      "     res.writeHead(404);",
+      "     return res.end('404: Not Found.');",
+      "   }",
+      "   res.writeHead(200, {'Content-Type': mime.lookup(req.url)});",
+      "   return res.end(data);",
+      " });",
+      "}).listen(8080);"
+    ]
+  }
+}

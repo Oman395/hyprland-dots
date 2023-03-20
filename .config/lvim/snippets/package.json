@@ -1,0 +1,16 @@
+{
+  "name": "lvim-snippets",
+  "author": "Oran RH",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./js.json"
+      },
+      {
+        "language": "html",
+        "path": "./html.json"
+      }
+    ]
+  }
+}

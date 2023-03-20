@@ -1,0 +1,16 @@
+#!/bin/bash
+case "$1" in
+    1)  face='¯\_(ツ)_/¯' 
+        ;;
+    2)  face='( ͡° ͜ʖ ͡°)' 
+        ;;
+    3)  face='ಠ_ಠ' 
+        ;;
+    4)  face='◕‿◕' 
+        ;;
+    5)  face='(╯°□°）╯︵ ┻━┻' 
+        ;;
+esac
+
+echo -n $face | xclip 
+echo -n $face | xclip -selection clipboard

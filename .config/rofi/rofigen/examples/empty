@@ -1,0 +1,19 @@
+#!/bin/bash
+
+title="title"
+widthpercent=number
+
+typeset -A menu
+menu=(
+    [option 1]="command to execute 1"
+    [option 2]="command to execute 2"
+)
+menu_nrows=${#menu[@]}
+
+typeset -A colors
+colors=(
+    [-color-window]="#000000, #ffffff, #ffffff"
+    [-color-normal]="#ffffff, #000000, #eee8d5, #272727, #ffffff"
+    [-color-active]="#fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3"
+    [-color-urgent]="#fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3"
+)
