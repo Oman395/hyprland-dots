@@ -28,9 +28,14 @@
 
 .notification {
   border-radius: 10px;
-  margin: 6px 12px;
+  margin: 12px 12px;
   box-shadow: none;
   padding: 0;
+}
+
+scale {
+  padding-left: 21px;
+  padding-right: 18px;
 }
 
 scale trough {
@@ -80,7 +85,7 @@ scale trough slider {
   text-shadow: none;
   padding: 0;
   border-radius: 100%;
-  margin-top: 10px;
+  margin-top: 16px;
   margin-right: 16px;
   box-shadow: none;
   border: none;
