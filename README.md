@@ -3,4 +3,4 @@
 
 My dotfiles. Why you would use this, I don't know. Requires hyprland (obviously), as well as pretty much all the apps listed in .config, and a font patched with nerd fonts. Quick note-- a couple paths might be using my $HOME name, so you might need to edit them, and the scripts that launch apps will need to be edited for your screen's dimensions.
 
-To install, just drag and drop onto your $HOME, then debug whatever issues come with it-- I really don't feel like making a proper install guide (or using nix).issues come with it-- I really don't feel like making a proper install guide (or using nix).
+To install, just drag and drop onto your $HOME, then debug whatever issues come with it-- I really don't feel like making a proper install guide (or using nix).
