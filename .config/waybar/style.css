@@ -7,10 +7,10 @@
 }
 
 window#waybar {
-    background-color: @crust;
     color: @text;
     margin: 0;
     padding: 0;
+    background: transparent;
 }
 
 button {

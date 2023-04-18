@@ -5,7 +5,7 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 
 lvim.plugins = {
-    {"catppuccin/nvim"}
+    {"catppuccin/nvim"},
 }
 
 -- load required null-ls references
@@ -14,6 +14,7 @@ local cmd_resolver = require("null-ls.helpers.command_resolver")
 local methods = require("null-ls.methods")
 local u = require("null-ls.utils")
 local FORMATTING = methods.internal.FORMATTING
+local ACTIONS = methods.internal.CODE_ACTIONS
 lvim.colorscheme = "catppuccin-macchiato"
 
 -- Define the new javascript formatter
@@ -23,7 +24,8 @@ local pe = h.make_builtin({
     url = "https://github.com/prettier/prettier-eslint-cli",
     description = "Eslint + Prettier",
   },
-  method = FORMATTING,
+  method = {FORMATTING,
+    ACTIONS},
   filetypes = {
     "javascript",
     "javascriptreact",
@@ -63,7 +65,7 @@ local pejson = h.make_builtin({
 -- Enable the the defined formatters
 -- if you are using vanilla NeoVim + null-ls please
 -- read how to install/enable on
--- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/CONFIG.md 
+-- https://github.com/joNodejs extension host for vim & neovim, load extensions like VSCode and host language servers. - GitHub - neoclide/coc.nvim: Nodejs extension host for vim ...se-elias-alvarez/null-ls.nvim/blob/main/doc/CONFIG.md 
 local nls = require("null-ls")
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 nls.setup({
@@ -82,6 +84,7 @@ nls.setup({
         end
     end,
     sources = {
+      nls.builtins.code_actions.eslint,
       pe,
       pejson
     }

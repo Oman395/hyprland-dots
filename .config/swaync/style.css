@@ -180,6 +180,7 @@ scale trough slider {
 .control-center {
   background: @cc-bg;
   border-radius: 10px;
+  border: 2px solid rgb(125, 196, 228);
 }
 
 .control-center-list {
@@ -196,7 +197,7 @@ scale trough slider {
 
 /* Window behind control center and on all other monitors */
 .blank-window {
-  background: alpha(black, 0.25);
+  background: alpha(black, 0.0);
 }
 
 /*** Widgets ***/

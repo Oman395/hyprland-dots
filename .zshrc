@@ -103,3 +103,4 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/home/oran/bin:/home/oran/.local/bin:$PATH
 alias nvim="lvim"
 alias spotify="LD_PRELOAD=/usr/lib/spotifywm.so /usr/bin/spotify"
+autoload -U compinit; compinit
