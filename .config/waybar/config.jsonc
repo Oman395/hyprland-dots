@@ -88,12 +88,13 @@
   },
   "clock": {
     "format": "<span font='13'>{:%H:%M}</span>",
-    "tooltip-format": "{:%H:%M  |  %Z}",
+    "tooltip-format": "{:%A, %B %d, %Y | %H:%M %Z}",
     "on-click": "galendae"
   },
   "backlight": {
     "format": "󰃠{icon}",
     "tooltip": true,
+    "tooltip-format": "{percent}%",
     "format-icons": [
       "󰣾",
       "󰣴",

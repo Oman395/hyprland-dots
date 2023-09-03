@@ -1,2 +1,2 @@
 audio.play_bitrate_non_metered_migrated=true
-app.player.volume=65536
+ui.right_panel_content=2

@@ -1,3 +1,2 @@
-timeout 300 'kitty -o allow_remote_control=yes --listen-on unix:/tmp/pipekitty -T fspipe --detach pipes.js'
-timeout 600 'kitty @ --to unix:/tmp/pipekitty close-ta && bswaylock -p'
-timeout 1200 'poweroff'
+timeout 600 'bswaylock -p'
+timeout 1200 'systemctl hibernate'
