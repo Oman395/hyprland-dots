@@ -8,8 +8,8 @@
 
 window#waybar {
     color: @text;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     background: transparent;
 }
 
@@ -17,7 +17,7 @@ button {
     /* Use box-shadow instead of border so the text isn't offset */
     /* Avoid rounded borders under each button name */
     border: none;
-    border-radius: 0;
+    border-radius: 0px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -26,8 +26,9 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0px 5px;
     background-color: @base;
+    border: none;
     color: @overlay0;
 }
 
@@ -39,10 +40,20 @@ button:hover {
   color:@rosewater;
   box-shadow: inherit;
   text-shadow: inherit;
+  border: none;
 }
 
 #workspaces button.active {
   color: @text;
+  border: none;
+}
+
+#workspaces button:focus {
+  border: none;
+}
+
+#workspaces button:indeterminate {
+  border: none;
 }
 
 #custom-arGap {
@@ -82,7 +93,7 @@ button:hover {
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+    margin-left: 0px;
 }
 
 #workspaces:first-child button {
@@ -91,7 +102,7 @@ button:hover {
 
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+    margin-right: 0px;
 }
 
 
@@ -102,7 +113,7 @@ button:hover {
 #network,
 #pulseaudio
 {
-    padding: 0 10px;
+    padding: 0px 10px;
     color: @text;
     font-size: 29px;
 }

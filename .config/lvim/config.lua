@@ -5,7 +5,9 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 
 lvim.plugins = {
-    {"catppuccin/nvim"},
+  { "catppuccin/nvim" },
+  { "lervag/vimtex" },
+  { "habamax/vim-godot" }
 }
 
 -- load required null-ls references
@@ -24,8 +26,8 @@ local pe = h.make_builtin({
     url = "https://github.com/prettier/prettier-eslint-cli",
     description = "Eslint + Prettier",
   },
-  method = {FORMATTING,
-    ACTIONS},
+  method = { FORMATTING,
+    ACTIONS },
   filetypes = {
     "javascript",
     "javascriptreact",
@@ -65,30 +67,30 @@ local pejson = h.make_builtin({
 -- Enable the the defined formatters
 -- if you are using vanilla NeoVim + null-ls please
 -- read how to install/enable on
--- https://github.com/joNodejs extension host for vim & neovim, load extensions like VSCode and host language servers. - GitHub - neoclide/coc.nvim: Nodejs extension host for vim ...se-elias-alvarez/null-ls.nvim/blob/main/doc/CONFIG.md 
+-- https://github.com/joNodejs extension host for vim & neovim, load extensions like VSCode and host language servers. - GitHub - neoclide/coc.nvim: Nodejs extension host for vim ...se-elias-alvarez/null-ls.nvim/blob/main/doc/CONFIG.md
 local nls = require("null-ls")
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 nls.setup({
-    -- you can reuse a shared lspconfig on_attach callback here
-    on_attach = function(client, bufnr)
-        if client.supports_method("textDocument/formatting") then
-            vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-            vim.api.nvim_create_autocmd("BufWritePre", {
-                group = augroup,
-                buffer = bufnr,
-                callback = function()
-                    -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-                    vim.lsp.buf.format({ bufnr = bufnr })
-                end,
-            })
-        end
-    end,
-    sources = {
-      nls.builtins.code_actions.eslint,
-      pe,
-      pejson
-    }
-  })
+  -- you can reuse a shared lspconfig on_attach callback here
+  on_attach = function(client, bufnr)
+    if client.supports_method("textDocument/formatting") then
+      vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        group = augroup,
+        buffer = bufnr,
+        callback = function()
+          -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
+          vim.lsp.buf.format({ bufnr = bufnr })
+        end,
+      })
+    end
+  end,
+  sources = {
+    nls.builtins.code_actions.eslint,
+    pe,
+    pejson
+  }
+})
 
 -- optional: LunarVim related step. Here we enable eslint as linter for Javascript.
 local linters = require "lvim.lsp.null-ls.linters"
@@ -101,5 +103,5 @@ linters.setup {
 
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { name = "csharpier"}
+  { name = "csharpier" }
 }

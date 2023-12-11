@@ -3,7 +3,7 @@
   "height": 30,
   "spacing": 0,
   "modules-left": [
-    "wlr/workspaces",
+    "hyprland/workspaces",
     "custom/arGap",
     "custom/archthing",
     "custom/wsGap"
@@ -25,7 +25,7 @@
     "custom/clGap",
     "clock"
   ],
-  "wlr/workspaces": {
+  "hyprland/workspaces": {
     "format": "{icon}",
     "on-click": "activate",
     "format-icons": {

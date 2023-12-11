@@ -106,3 +106,6 @@ alias spotify="LD_PRELOAD=/usr/lib/spotifywm.so /usr/bin/spotify"
 autoload -U compinit; compinit
 alias icat="kitty +kitten icat"
 alias sshMcServer="kitty +kitten ssh 100.87.30.37"
+alias nvimGodot="lvim --listen godothost ."
+alias vpython="/home/oran/pyvenv/bin/python"
+alias vpip="/home/oran/pyvenv/bin/pip"
